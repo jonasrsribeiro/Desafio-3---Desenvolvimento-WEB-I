@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}" media="screen" />
+</head>
+
+<body background="{{ url_for('static', filename='img/fundo.png') }}">
+    <main>
+        <div class="divMain">
+            <div>
+                <header>
+                    <hr style="background-color: #6f75a7; width: 100%; height: 4.9px; border: 0cm; margin: 0; padding: 0;">
+                    <div  class="divCabecalho">
+                        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo da Unes Universidade">
+                        <div><a href="{{ url_for('home') }}">Home</a> | <a href="{{ url_for('quemSomos') }}">Quem Somos</a> | </a> <a href="{{ url_for('contato') }}">Contato</a></div>
+                    </div>
+                </header>
+                <div>
+                    <img src="{{ url_for('static', filename='img/capa.png') }}" alt="Capa da Universidade" style="margin-left:22%">
+                </div>
+                <div>
+                    <h3>Sobre a Universidade</h3>
+                    <p>Lorem <b>ipsum dolor</b>, sit amet consectetur adipisicing elit. Necessitatibus sint repellat explicabo quia amet quidem at nostrum delectus veniam cum! Ea iure vel voluptatum odio doloribus natus dolor repudiandae deserunt.
+                    Rerum consequatur laborum esse ipsa fuga nam natus a, totam aliquam dolorem consectetur doloremque aliquid quisquam debitis reiciendis ea quis cupiditate odio. Corrupti, reiciendis! Maiores magnam laboriosam ipsam quod itaque.
+                    Mollitia fuga vitae dolor, voluptate possimus ipsam culpa! Esse, nihil harum sit deleniti odio tenetur quisquam vero voluptatibus nesciunt laborum fuga labore sunt officiis reprehenderit, inventore magni autem natus veritatis!
+                    Quae rerum numquam iure sapiente aut accusamus, odio autem cum minus nam omnis! Eius deleniti rerum blanditiis saepe delectus vitae magnam corrupti dolorem aspernatur et sequi, quam asperiores sit veniam.
+                    Quo nesciunt ad debitis adipisci recusandae aspernatur quibusdam, aperiam delectus veritatis dolores. Inventore dolore suscipit, in pariatur facere repudiandae earum voluptatibus. Ipsa consectetur ducimus at odio qui quos ipsum tempora!</p>
+                    <p>Lorem <b>ipsum dolor</b>, sit amet consectetur adipisicing elit. Optio quasi quidem non provident illo dignissimos molestias id consequuntur, nihil consectetur. Officiis et rem tempore ipsum excepturi id illum consequuntur voluptatem.
+                    Quas ad, illum architecto a incidunt quod. Dolorum accusamus, facilis quod, nam dicta odio sequi praesentium minima unde ut amet nihil consectetur provident neque. Sint aliquam adipisci dolorum voluptatibus repudiandae.
+                    Quidem cum quos omnis maiores aliquid! Facilis vitae placeat quas delectus veritatis deleniti consequuntur debitis perferendis quibusdam libero fuga quam ipsa repudiandae, a enim, beatae voluptates sunt neque ad labore?
+                    Similique voluptates eius, sunt, quisquam nostrum tempora quia aspernatur ipsam eveniet animi mollitia ex assumenda sit corrupti velit hic id quaerat eligendi repellendus voluptate nam vitae? Nobis doloremque eaque consectetur.
+                    Voluptatum corrupti aliquam ullam dolor nobis illo sunt asperiores rerum placeat ducimus? Debitis, eum totam autem, sequi illo atque natus quasi aperiam, dolorum unde odit maiores soluta sunt eius hic.</p>
+                    <footer>
+                        <div class="rodape">
+                            <h5>Todos os direitos reservados</h5>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
