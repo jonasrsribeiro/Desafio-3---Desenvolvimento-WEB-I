@@ -1,17 +1,13 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request, redirect, flash
+from flask_mysqldb import MySQL
+import yaml
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET", "POST"])
-def home():
-    return render_template("home.html")
+app.secret_key = b'42'
 
-@app.route("/quem-somos", methods=["GET", "POST"])
-def quemSomos():
-    return render_template("quemsomos.html")
+from dbconnection import *
 
-@app.route("/contato", methods=["GET", "POST"])
-def contato():
-    return render_template("contato.html")
+from routes import *
 
 app.run(debug=True)

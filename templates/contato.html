@@ -1,50 +1,38 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}" media="screen" />
-</head>
-<body background="{{ url_for('static', filename='img/fundo2.png') }}">
-    <main>
-        <div class="divMain">
-            <div class="divPreencher">
-                <header>
-                    <hr style="background-color: #6f75a7; width: 100%; height: 4.9px; border: 0cm; margin: 0; padding: 0;">
-                    <div  class="divCabecalho2">
-                        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo da Unes Universidade">
-                        <div><a href="{{ url_for('home') }}">Home</a> | <a href="{{ url_for('quemSomos') }}">Quem Somos</a> | </a> <a href="{{ url_for('contato') }}">Contato</a></div>
-                    </div>
-                </header>
+{% extends "base.html" %}
+
+{% block background %}
+    <body background="{{ url_for('static', filename='img/fundo2.png') }}">
+{% endblock %}
+
+{% block contents %}
                 <div class="divBorder">
                     <h3>Entre em contato</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus sint repellat explicabo quia amet quidem at nostrum delectus veniam cum!</p>
                     <hr>
-                    <form>
+                    <form method="post">
                         <div>
                             Seu e-mail:<br>
-                            <input type="text" id="email" />
+                            <input type="text" id="email" name="email"/>
                         </div>
                         <div>
                             Assunto:<br>
-                            <input type="text" id="assunto" />
+                            <input type="text" id="assunto" name="assunto"/>
                         </div>
                         <div>
                             Descrição:<br>
-                            <textarea rows="6" id="descrição"></textarea>
+                            <textarea rows="6" id="descrição" name="descricao"></textarea>
                         </div>
-                        <button type="enviar">Enviar</button>
+                        <button type="enviar" name="enviar">Enviar</button>
                     </form>
-                    <footer>
-                        <div class="rodape">
-                            <h5>Todos os direitos reservados</h5>
-                        </div>
-                    </footer>
                 </div>
-            </div>
-        </div>
-    </main>
-</body>
-</html>
+
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <ul class=flashes>
+                        {% for message in messages %}
+                        <div class="error">{{ message }}</div>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                {% endwith %}
+{% endblock %}

@@ -1,0 +1,11 @@
+create database flaskapp;
+
+use flaskapp;
+
+create table mensagem(
+mensagem_id int primary key auto_increment,
+email varchar(50) not null,
+assunto varchar(20) not null,
+descricao varchar(200) not null);
+
+select * from mensagem;

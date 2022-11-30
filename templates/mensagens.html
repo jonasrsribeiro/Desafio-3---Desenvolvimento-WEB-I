@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block background %}
+    <body background="{{ url_for('static', filename='img/fundo2.png') }}">
+{% endblock %}
+
+{% block contents %}
+<!-- tabela -->
+<table>
+    
+    <thead>
+        <tr>
+            {% for coluna in colunas %}
+                <th>{{ coluna }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for linhas in dados %}
+        <tr>
+            {% for x in linhas %}
+                <td>{{ x }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+{% endblock %}

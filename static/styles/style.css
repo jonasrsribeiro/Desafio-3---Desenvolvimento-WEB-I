@@ -63,7 +63,40 @@ text-align: center;
     width: auto;
     height: auto;
 }
-divPreencher{
+.divPreencher{
     width: 1286px;
     height: 578px;
+}
+
+table {
+    table-layout: fixed;
+    border: none;
+    border: 1px solid #C8C8C8;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+    font-size: .9rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+table th, 
+table td {
+    padding: 0.6rem;
+}
+
+/* cabeçalho tabela */
+th {
+    background-color: #D3D3D3;
+    color: #000;
+}
+
+/* linha tabela de cor alternada  */
+tr:nth-child(even) {
+    background: #EFEFEF;
+}
+
+/* linha tabela ao passar o mouse */
+tr:hover{ 
+    background-color: #c2c2c2;
 }
